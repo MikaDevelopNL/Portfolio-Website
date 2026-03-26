@@ -26,12 +26,11 @@
     <main>
       <section class="hero">
         <div class="hero-content">
-          <h1>Portfolio</h1>
+          <p>Mika Huibrechtse - Software Developer</p>
           <div class="hero-buttons">
             <a href="#over-mij" class="btn">Over Mij</a>
-            <a href="contact.html" class="btn">Contact</a>
+            <a href="#contact" class="btn">Contact</a>
           </div>
-          <p>Doe wat je drijft, en zie hoe geluk blijft.</p>
         </div>
       </section>
 
@@ -40,17 +39,17 @@
           <div class="over-mij-grid">
             <div class="over-mij-image">
               <img
-                src="/img/foto Mika water.jpeg"
+                src="img/foto Mika water.jpeg"
                 alt="Een jongeman die bij water staat"
               />
-              <div class="over-mij-image-tekst">
-                <p>Naam: Mika Huibrechtse</p>
-                <p>Leeftijd: 23 Jaar</p>
-                <p>Woonplaats: Achthuizen</p>
+              <div class="over-mij-image-text">
+                <p><strong>Naam:</strong> Mika Huibrechtse</p>
+                <p><strong>Leeftijd:</strong> 23 Jaar</p>
+                <p><strong>Woonplaats:</strong> Achthuizen</p>
               </div>
             </div>
             <div class="over-mij-text">
-              <h3>Over mij</h3>
+              <h2>Over mij</h2>
               <p>
                 Ik ben een beginnende software developer met een sterke focus op
                 webdevelopment. Sinds december 2025 ben ik intensief bezig met
@@ -66,7 +65,186 @@
           </div>
         </div>
       </section>
+
+      <section class="specialiteiten">
+        <div class="container">
+          <div class="specialiteiten-grid">
+            <h2>Mijn Specialiteiten</h2>
+            <div class="specialiteiten-card">
+              <h3>Modern Design</h3>
+              <div>
+                <div class="icon" aria-hidden="true">🎨</div>
+                <p>
+                  Ik bouw websites met een duidelijke structuur en logische
+                  navigatie, zodat bezoekers snel vinden wat ze zoeken en een
+                  prettige, overzichtelijke gebruikerservaring hebben.
+                </p>
+              </div>
+            </div>
+            <div class="specialiteiten-card reverse">
+              <h3>Gebruiksvriendelijkheid</h3>
+              <div>
+                <div class="icon" aria-hidden="true">🫱🏽‍🫲🏽</div>
+                <p>
+                  Ik bouw websites met een duidelijke structuur en logische
+                  navigatie, zodat bezoekers snel vinden wat ze zoeken en een
+                  prettige, overzichtelijke gebruikerservaring hebben.
+                </p>
+              </div>
+            </div>
+            <div class="specialiteiten-card">
+              <h3>Responsive Design</h3>
+              <div>
+                <div class="icon" aria-hidden="true">📲</div>
+                <p>
+                  Ik ontwikkel websites die optimaal werken op mobiel, tablet en
+                  desktop, zodat de gebruikservaring altijd consistent en
+                  professioneel blijft op elk apparaat.
+                </p>
+              </div>
+            </div>
+            <a href="over-mij.html" class="btn">Meer te weten komen?</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="projecten">
+        <div class="container">
+          <h2>Projecten</h2>
+          <div class="projecten-grid">
+            <div class="projecten-card">
+              <h3>Padel Website</h3>
+              <p>
+                Mijn eerste website na het leren van HTML en CSS. Een
+                padelwebsite waarin ik mijn basis heb toegepast. Nog niet
+                perfect, maar een project waarin mijn groei en streven naar
+                verbetering duidelijk zichtbaar zijn.
+              </p>
+              <p class="tools"><strong>Tools:</strong> HTML, CSS.</p>
+              <a
+                href="https://mikashopifypro.github.io/padel-website/"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bekijk Project
+              </a>
+            </div>
+            <div class="projecten-card">
+              <h3>Voorbeeld Portfolio Website</h3>
+              <p>
+                Mijn tweede website waarin ik mijn kennis verder heb toegepast
+                en verdiept. Hier is duidelijk te zien dat ik meer controle
+                krijg over structuur, styling en hoe alles samenwerkt binnen een
+                website.
+              </p>
+              <p class="tools"><strong>Tools:</strong> HTML, CSS.</p>
+              <a
+                href="https://mikadevelopnl.github.io/Voorbeeld-Portfolio-Website/"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bekijk Project</a
+              >
+            </div>
+            <div class="projecten-card">
+              <h3>Comming Soon</h3>
+              <p>
+                Nieuwe projecten zijn in ontwikkeling. Ik werk continu aan het
+                verbeteren van mijn vaardigheden en het bouwen van sterke
+                websites. Binnenkort verschijnt hier meer werk — blijf op de
+                hoogte.
+              </p>
+              <p class="tools"><strong>Tools:</strong> -</p>
+              <a href="#" class="btn" target="_blank" rel="noopener noreferrer"
+                >⌛</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Naam: </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Jouw naam"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email: </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Jouw email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="bericht">Bericht: </label>
+              <textarea
+                name="bericht"
+                id="bericht"
+                placeholder="Typ hier u bericht"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button class="btn" type="submit">Verstuur</button>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-card">
+          <h3>Portfolio Mika</h3>
+          <p>
+            Beginnende front-end developer met een passie voor het bouwen van
+            mooie, gebruiksvriendelijke websites. Dagelijks bezig met HTML, CSS
+            en GitHub om mezelf te verbeteren.
+          </p>
+        </div>
+        <div class="footer-card">
+          <h3>Pagina's</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="over-mij.html">Over Mij</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-socials">
+        <a
+          href="https://www.instagram.com/mikafios/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img src="img/Instagram logo.svg" alt="logo van instagram"
+        /></a>
+        <a
+          href="https://github.com/MikaDevelopNL/MikaH-Portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img src="img/Github logo.svg" alt="logo van github"
+        /></a>
+        <a href="" target="_blank" rel="noopener noreferrer"
+          ><img src="img/Linkedin Logo.svg" alt="logo van linkedin"
+        /></a>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Portfolio Mika</p>
+      </div>
+    </footer>
   </body>
 </html>
