@@ -29,23 +29,19 @@ html {
   --background-color: #0f0f0f;
   --text-color: #fff;
   --border-color: #e36414;
-  --border-radius: 10px;
   --background-button: black;
   /* Spacing */
   --letter-spacing: 0.03rem;
   /* Border Radius */
-  --radius: 10px;
+  --border-radius: 10px;
   /* Schaduwen */
   --text-shadow: 0 5px 6px rgba(0, 0, 0, 0.5);
   --box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
-html,
 body {
   font-family: Nunito, sans-serif;
   overflow-x: hidden;
-  max-width: 100%;
-  width: 100%;
 }
 
 main section {
@@ -55,10 +51,8 @@ main section {
 h1,
 h2,
 h3,
-h4,
-p,
-a {
-  margin: 0 0 1.5rem;
+h4 {
+  margin-bottom: 1.5rem;
 }
 
 h1 {
@@ -82,6 +76,8 @@ h4 {
 
 p {
   font-size: 1.5rem;
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: 1rem;
 }
 
 li {
@@ -110,7 +106,6 @@ a:active {
 /* Hier komt alles van de navigatie in van de website */
 .navbar {
   display: grid;
-  flex-direction: column;
   align-items: center;
   max-width: 100%;
   position: static;
@@ -119,7 +114,6 @@ a:active {
 }
 
 .navbar .nav-logo {
-  align-self: flex-start;
   font-size: 3rem;
   font-weight: bold;
   color: var(--secundairy-color);
@@ -151,13 +145,6 @@ a:active {
   margin: 0 auto;
 }
 
-.navbar li:hover,
-.navbar li:focus {
-  background-color: var(--background-color);
-  color: var(--primary-color);
-  text-decoration: underline;
-}
-
 .navbar li a {
   display: block;
   width: 100%;
@@ -172,14 +159,17 @@ a:active {
 /* Hier komt de hero te staan */
 .hero {
   margin: 1rem 0;
+  position: relative;
 }
 
 .hero-content {
-  background-image: url("../img/foto\ mika\ veld.jpeg");
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../img/foto-mika-veld.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 300px;
+  min-height: 30rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -188,11 +178,16 @@ a:active {
   border-bottom: 3px solid var(--border-color);
 }
 
-.hero-content p {
-  margin: 0.5rem 0 6rem;
-  font-size: clamp(2rem, 3vw, 4rem);
+.hero-content h1 {
+  margin: 0.5rem auto 6rem;
+  padding: 1rem 0;
+  font-size: clamp(1.8rem, 3vw, 4rem);
   text-shadow: var(--text-shadow);
   letter-spacing: 0.05rem;
+  background-color: rgba(245, 245, 245, 0.752);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 90%;
 }
 
 .hero-buttons {
@@ -237,8 +232,9 @@ a:active {
   object-fit: cover;
   width: 150px;
   height: auto;
-  border: 2px solid var(--border-color);
+  border: 3px solid var(--secundairy-color);
   border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 .over-mij-image-text {
@@ -260,7 +256,7 @@ a:active {
 
 .specialiteiten {
   background-color: var(--background-color);
-  border-bottom: var(--border-color);
+  border-bottom: 2px solid var(--border-color);
   border-top: 2px solid var(--border-color);
   color: whitesmoke;
   padding: 2rem 0;
@@ -299,11 +295,11 @@ a:active {
 
 .specialiteiten-card .icon {
   font-size: 5rem;
-  margin: 1rem 0;
+  margin: auto 0;
 }
 
 .specialiteiten-card p {
-  align-items: center;
+  margin: auto 1rem;
 }
 
 .specialiteiten-card h3 {
@@ -327,6 +323,10 @@ a:active {
   background-color: whitesmoke;
   text-align: center;
   font-size: 1.5rem;
+}
+
+.specialiteiten a:hover {
+  color: black;
 }
 
 .projecten h2 {
@@ -451,6 +451,10 @@ a:active {
   letter-spacing: var(--letter-spacing);
 }
 
+.footer-grid a:hover {
+  color: black;
+}
+
 .footer-card ul {
   list-style-type: none;
 }
@@ -489,6 +493,196 @@ a:active {
     ALGEMEEN
  -----------------*/
   /* Hier komen alle semantische elementen */
+  main {
+    margin-top: 9rem;
+  }
+
+  main section {
+    margin-right: 4rem;
+    margin-left: 4rem;
+  }
+
+  main section .hero {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+
+  /* ---------------
+    NAVBAR
+ -----------------*/
+  /* Hier komt alles van de navigatie in van de website */
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 100;
+    min-width: 100%;
+    border-bottom: 5px solid var(--secundairy-color);
+    padding: 5rem 1.5rem;
+    top: 0;
+    height: 9rem;
+  }
+
+  .navbar .nav-logo {
+    font-size: 4rem;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar ul {
+    display: flex;
+    border-bottom: none;
+    padding-bottom: 0;
+    gap: 0;
+    white-space: nowrap;
+  }
+
+  .navbar li {
+    border: none;
+    color: var(--primary-color);
+    padding: 0.5rem;
+  }
+
+  .navbar li a {
+    background-color: var(--secundairy-color);
+    padding: 1rem 1rem;
+    border-radius: var(--border-radius);
+    font-size: 1.8rem;
+  }
+  /* ---------------
+    HERO
+ -----------------*/
+  /* Hier komt de hero te staan */
+  .hero-content {
+    min-height: 46rem;
+    border-top: none;
+    border-bottom: 3px solid var(--border-color);
+  }
+
+  .hero-content h1 {
+    margin-top: 2rem;
+  }
+
+  .hero-content a {
+    font-size: 2rem;
+  }
+
+  .hero-content .btn.left {
+    margin-left: 5rem;
+  }
+
+  .hero-content .btn.right {
+    margin-right: 5rem;
+  }
+
+  /* ---------------
+    SECTIES
+ -----------------*/
+  /* Hier komen alle secties in om te stylen */
+
+  .over-mij-grid {
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+  .over-mij-image {
+    flex-direction: column;
+    padding-left: 0;
+    margin: auto 0;
+    gap: 40px;
+  }
+
+  .over-mij-image img {
+    width: 180px;
+  }
+
+  .over-mij-text {
+    border-left: 3px solid var(--secundairy-color);
+    padding-left: 2rem;
+  }
+
+  .over-mij-text a {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .specialiteiten-card p {
+    margin: auto 1rem;
+  }
+
+  .specialiteiten a {
+    font-size: 1.8rem;
+  }
+
+  .contact h2 {
+    margin-left: 2rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+  }
+  /* ---------------
+    COMPONENTEN
+ -----------------*/
+  /* Hier komen de buttons en knoppen in */
+  .btn {
+    font-size: 1.8rem;
+  }
+
+  /* ---------------
+    FOOTER
+ -----------------*/
+  /* Hier komt de hele footer te staan */
+  .footer-grid-full {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 2rem;
+  }
+
+  .footer-grid {
+    margin: 0;
+  }
+  .footer-grid h3 {
+    margin-bottom: 1rem;
+  }
+  .footer-grid p {
+    margin-top: 0;
+    margin-right: 4rem;
+  }
+
+  .footer-grid li {
+    padding: 0 0 0.4rem;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-socials img {
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* ---------------
+    ALGEMEEN
+ -----------------*/
+  /* Hier komen alle semantische elementen */
+  main section {
+    margin-right: 6rem;
+    margin-left: 6rem;
+  }
 
   /* ---------------
     NAVBAR
@@ -500,10 +694,35 @@ a:active {
  -----------------*/
   /* Hier komt de hero te staan */
 
+  .hero-content .btn {
+    padding: 1.5rem 4rem;
+    font-size: 2.5rem;
+  }
+
+  .hero-content .btn.left {
+    margin-left: 8rem;
+  }
+
+  .hero-content .btn.right {
+    margin-right: 8rem;
+  }
+
   /* ---------------
     SECTIES
  -----------------*/
   /* Hier komen alle secties in om te stylen */
+
+  .specialiteiten-card h3 {
+    font-size: 3.5rem;
+  }
+
+  .contact {
+    margin: 0 6rem;
+  }
+
+  .contact .btn {
+    margin: 4rem auto;
+  }
 
   /* ---------------
     COMPONENTEN
@@ -516,7 +735,7 @@ a:active {
   /* Hier komt de hele footer te staan */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   /* ---------------
     ALGEMEEN
  -----------------*/
