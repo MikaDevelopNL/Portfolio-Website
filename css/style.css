@@ -75,7 +75,7 @@ h4 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: var(--letter-spacing);
   margin-bottom: 1rem;
 }
@@ -180,7 +180,7 @@ a:active {
 .hero-content h1 {
   margin: 0.5rem auto 6rem;
   padding: 1rem 0;
-  font-size: clamp(1.8rem, 3vw, 4rem);
+  font-size: clamp(3rem, 3vw, 4rem);
   text-shadow: var(--text-shadow);
   letter-spacing: 0.05rem;
   background-color: rgba(245, 245, 245, 0.752);
@@ -200,7 +200,7 @@ a:active {
   background-color: var(--background-button);
   padding: 0.75rem 4rem;
   border: 2px solid whitesmoke;
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: bold;
   border-radius: var(--border-radius);
   color: whitesmoke;
@@ -368,7 +368,7 @@ a:active {
 }
 
 .contact h2 {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .form-group {
@@ -407,7 +407,7 @@ a:active {
 
 .contact .btn {
   display: block;
-  margin: 2rem auto;
+  margin: 2rem auto 4rem;
   text-align: center;
   width: 70%;
 }
@@ -422,9 +422,6 @@ a:active {
 /* ---------------
     CONTACT PAGE
  -----------------*/
-.contact-page-text {
-  max-width: 100%;
-}
 
 .contact-page-text h1 {
   font-size: 4rem;
@@ -442,6 +439,7 @@ a:active {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   align-items: stretch;
+  margin-top: 3rem;
 }
 
 .contact-socials-card {
@@ -574,8 +572,32 @@ a:active {
     margin-left: 0;
   }
 
+  h1 {
+    text-align: center;
+    text-shadow: var(--text-shadow);
+    letter-spacing: 0.2rem;
+  }
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 2.5rem;
+  }
+
   p {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    letter-spacing: var(--letter-spacing);
+    margin-bottom: 1rem;
+  }
+
+  li {
+    font-size: 2.5rem;
   }
 
   /* ---------------
@@ -612,12 +634,12 @@ a:active {
   .navbar li {
     border: none;
     color: var(--primary-color);
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   .navbar li a {
     background-color: var(--secundairy-color);
-    padding: 1rem 1rem;
+    padding: 1.5rem 2rem;
     border-radius: var(--border-radius);
     font-size: 1.8rem;
   }
@@ -687,6 +709,10 @@ a:active {
     font-size: 1.8rem;
   }
 
+  .contact {
+    margin: 6rem 6rem;
+  }
+
   .contact h2 {
     margin-left: 2rem;
   }
@@ -696,6 +722,24 @@ a:active {
     padding: 1.5rem 2rem;
     font-size: 1.5rem;
   }
+
+  /* ---------------
+    PORTFOLIO PAGE
+ -----------------*/
+
+  /* ---------------
+    OVER MIJ PAGE
+ -----------------*/
+
+  /* ---------------
+    CONTACT PAGE
+ -----------------*/
+
+  .contact-socials-card p {
+    font-size: 2rem;
+    padding: 0 3rem;
+  }
+
   /* ---------------
     COMPONENTEN
  -----------------*/
@@ -739,6 +783,10 @@ a:active {
     height: 5rem;
     margin: 1rem;
   }
+
+  .footer-bottom p {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -749,6 +797,41 @@ a:active {
   main section {
     margin-right: 6rem;
     margin-left: 6rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    text-align: center;
+    text-shadow: var(--text-shadow);
+    letter-spacing: 0.2rem;
+  }
+
+  h2 {
+    font-size: 6rem;
+  }
+
+  h3 {
+    font-size: 4cqb;
+  }
+
+  h4 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2.5rem;
+    letter-spacing: var(--letter-spacing);
+    margin-bottom: 1rem;
+  }
+
+  li {
+    font-size: 2.5rem;
   }
 
   /* ---------------
@@ -783,6 +866,10 @@ a:active {
     font-size: 3.5rem;
   }
 
+  .specialiteiten a {
+    font-size: 2.5rem;
+  }
+
   .contact {
     margin: 0 6rem;
   }
@@ -795,11 +882,23 @@ a:active {
     COMPONENTEN
  -----------------*/
   /* Hier komen de buttons en knoppen in */
+  .btn {
+    font-size: 2.5rem;
+  }
 
   /* ---------------
     FOOTER
  -----------------*/
   /* Hier komt de hele footer te staan */
+  .footer-grid-full {
+    grid-template-columns: 4fr 1fr;
+  }
+
+  .footer-socials {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 5rem;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -822,6 +921,24 @@ a:active {
     SECTIES
  -----------------*/
   /* Hier komen alle secties in om te stylen */
+
+  /* ---------------
+    PORTFOLIO PAGE
+ -----------------*/
+
+  /* ---------------
+    OVER MIJ PAGE
+ -----------------*/
+
+  /* ---------------
+    CONTACT PAGE
+ -----------------*/
+
+  .contact-page-text,
+  .contact-page-socials,
+  .contact {
+    margin-top: 5rem;
+  }
 
   /* ---------------
     COMPONENTEN
