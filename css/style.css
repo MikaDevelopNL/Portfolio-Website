@@ -131,8 +131,7 @@ a:active {
   gap: 10px;
   margin: 0 auto;
   width: 90%;
-  border-bottom: 3px solid var(--secundairy-color);
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .navbar li {
@@ -158,7 +157,7 @@ a:active {
  -----------------*/
 /* Hier komt de hero te staan */
 .hero {
-  margin: 1rem 0;
+  margin: 0 0 1rem;
   position: relative;
 }
 
@@ -174,8 +173,8 @@ a:active {
   display: flex;
   flex-direction: column;
   text-align: center;
-  border-top: 3px solid var(--border-color);
-  border-bottom: 3px solid var(--border-color);
+  border-top: 3px solid var(--secundairy-color);
+  border-bottom: 3px solid var(--secundairy-color);
 }
 
 .hero-content h1 {
@@ -213,7 +212,9 @@ a:active {
  -----------------*/
 /* Hier komen alle secties in om te stylen */
 
-/* HOMEPAGE */
+/* ---------------
+    HOME PAGE 
+ -----------------*/
 
 .over-mij-grid {
   display: grid;
@@ -256,8 +257,8 @@ a:active {
 
 .specialiteiten {
   background-color: var(--background-color);
-  border-bottom: 2px solid var(--border-color);
-  border-top: 2px solid var(--border-color);
+  border-bottom: 3px solid var(--border-color);
+  border-top: 3px solid var(--border-color);
   color: whitesmoke;
   padding: 2rem 0;
   max-width: 100%;
@@ -322,7 +323,7 @@ a:active {
 .specialiteiten a {
   background-color: whitesmoke;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .specialiteiten a:hover {
@@ -373,7 +374,6 @@ a:active {
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   margin: 1.5rem 2rem;
 }
 
@@ -392,11 +392,17 @@ a:active {
   font-weight: bolder;
   font-size: 1.3rem;
   outline: none;
+  color: var(--secundairy-color);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border: 3px solid var(--border-color);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--secundairy-color);
 }
 
 .contact .btn {
@@ -405,6 +411,67 @@ a:active {
   text-align: center;
   width: 70%;
 }
+/* ---------------
+    PORTFOLIO PAGE
+ -----------------*/
+
+/* ---------------
+    OVER MIJ PAGE
+ -----------------*/
+
+/* ---------------
+    CONTACT PAGE
+ -----------------*/
+.contact-page-text {
+  max-width: 100%;
+}
+
+.contact-page-text h1 {
+  font-size: 4rem;
+  border-top: 3px solid var(--secundairy-color);
+  padding-top: 2rem;
+}
+
+.contact-page-text p {
+  text-align: center;
+  margin: 0 5rem;
+}
+
+.contact-socials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: stretch;
+}
+
+.contact-socials-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background: radial-gradient(circle, whitesmoke 1%, var(--primary-color) 99%);
+  border: 2px solid var(--secundairy-color);
+  border-radius: var(--border-radius);
+}
+
+.contact-socials-card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+}
+.contact-socials-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.contact-socials-card p {
+  text-align: center;
+  font-weight: bold;
+  margin-top: auto;
+}
 
 /* ---------------
     COMPONENTEN
@@ -412,10 +479,10 @@ a:active {
 /* Hier komen de buttons en knoppen in */
 .btn {
   background-color: var(--background-button);
-  padding: 1.5rem 3rem;
+  padding: 1.8rem 3rem;
   border-radius: var(--border-radius);
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-decoration: none;
   display: inline-block;
   color: var(--primary-color);
