@@ -63,7 +63,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h3 {
@@ -71,7 +71,7 @@ h3 {
 }
 
 h4 {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 p {
@@ -390,7 +390,6 @@ a:active {
   border-radius: var(--border-radius);
   padding: 1rem 1.5rem;
   font-weight: bolder;
-  font-size: 1.3rem;
   outline: none;
   color: var(--secundairy-color);
 }
@@ -398,6 +397,7 @@ a:active {
 .form-group input:focus,
 .form-group textarea:focus {
   border: 3px solid var(--border-color);
+  font-size: 1.8rem;
 }
 
 .form-group input::placeholder,
@@ -415,9 +415,146 @@ a:active {
     PORTFOLIO PAGE
  -----------------*/
 
+.portfolio-projects {
+  margin: 0 1rem 2rem;
+  max-width: 100%;
+  border-top: 2px solid var(--secundairy-color);
+  padding-top: 2rem;
+}
+
+.portfolio-projects h1 {
+  font-size: 5rem;
+}
+
+.portfolio-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.portfolio-projects-card {
+  background: linear-gradient(to top, whitesmoke 30%, var(--primary-color));
+  border-radius: var(--border-radius);
+  border: 3px solid var(--secundairy-color);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-projects-card:last-child {
+  display: none;
+}
+
+.portfolio-projects-card h2 {
+  text-align: center;
+}
+
+.portfolio-projects-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid var(--secundairy-color);
+  margin-bottom: 1rem;
+}
+
+.portfolio-projects-card:last-child img {
+  object-position: 15% center;
+}
+
+.info-item-grid {
+  border-bottom: 2px solid var(--secundairy-color);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.info-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+.info-text::before {
+  content: "+";
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+.info-item-grid[open] .info-text::before {
+  content: "-";
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+.info-item-inside {
+  padding: 1rem 0;
+}
+
+.info-item-inside ul,
+.info-item-inside p {
+  list-style: none;
+  padding: 1rem 0.5rem;
+}
+
+.info-item-inside li,
+.info-item-inside p {
+  font-size: 1.5rem;
+  letter-spacing: var(--letter-spacing);
+}
+
+.info-item-inside:not(:last-child) {
+  border-bottom: 1px solid var(--secundairy-color);
+}
+
+.info-question {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.portfolio-projects-card .btn {
+  margin: 1rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
 /* ---------------
     OVER MIJ PAGE
  -----------------*/
+
+.over-mij-grid-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  border-top: 3px solid var(--secundairy-color);
+  padding-top: 3rem;
+  align-items: start;
+}
+
+.btn.sidebar {
+  margin: 2rem auto 0;
+  width: 100%;
+  text-align: center;
+}
+
+.over-mij-grid-info ul {
+  list-style: none;
+}
+
+.over-mij-grid-info li h4 {
+  font-weight: bold;
+}
+
+.over-mij-grid-info li:not(:last-child) {
+  margin: 3rem auto;
+  border-bottom: 1px solid var(--secundairy-color);
+}
+
+.over-mij-info h2 {
+  margin-top: 3rem;
+}
 
 /* ---------------
     CONTACT PAGE
@@ -469,6 +606,11 @@ a:active {
   text-align: center;
   font-weight: bold;
   margin-top: auto;
+}
+
+form p {
+  font-size: 1.5rem;
+  margin-left: 2rem;
 }
 
 /* ---------------
@@ -727,9 +869,45 @@ a:active {
     PORTFOLIO PAGE
  -----------------*/
 
+  .portfolio-projects h1 {
+    font-size: 7rem;
+    margin-bottom: 4rem;
+  }
+
+  .portfolio-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-projects-card {
+    min-height: 750px;
+  }
+  .portfolio-projects-card h2 {
+    margin: auto 0;
+  }
+  .portfolio-projects-card img {
+    margin-top: auto;
+  }
+
   /* ---------------
     OVER MIJ PAGE
  -----------------*/
+
+  .over-mij-grid-info {
+    grid-template-columns: 300px 1fr;
+  }
+
+  .sidebar {
+    border-right: 3px solid var(--secundairy-color);
+    padding-right: 2rem;
+    position: sticky;
+    top: 14rem;
+    margin-top: 2rem;
+  }
+
+  .over-mij-text.info {
+    border-left: none;
+    padding-left: 0;
+  }
 
   /* ---------------
     CONTACT PAGE
@@ -813,11 +991,11 @@ a:active {
   }
 
   h2 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   h3 {
-    font-size: 4cqb;
+    font-size: 4rem;
   }
 
   h4 {
@@ -879,6 +1057,77 @@ a:active {
   }
 
   /* ---------------
+    PORTFOLIO PAGE
+ -----------------*/
+
+  .portfolio-projects h1 {
+    font-size: 9rem;
+  }
+
+  .portfolio-projects-card img {
+    height: 300px;
+  }
+
+  .portfolio-projects-grid {
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolio-projects-card {
+    min-height: 800px;
+    min-width: 300px;
+  }
+
+  .portfolio-projects-card:last-child {
+    display: flex;
+  }
+
+  .info-text {
+    font-size: 2.2rem;
+  }
+
+  .info-item-inside li,
+  .info-item-inside p {
+    font-size: 1.8rem;
+  }
+
+  /* ---------------
+    OVER MIJ PAGE
+ -----------------*/
+
+  .over-mij.info {
+    margin: 1rem 2rem;
+  }
+
+  .over-mij-grid-info {
+    grid-template-columns: 350px 1fr;
+  }
+
+  .over-mij-text.info p {
+    padding: 0rem 1rem 0 0;
+  }
+
+  /* ---------------
+    CONTACT PAGE
+ -----------------*/
+  .contact-page-text h1 {
+    font-size: 6rem;
+  }
+  .contact-socials-card {
+    padding: 4rem 0;
+  }
+  .contact-socials-card img {
+    transition: transform 0.3s ease-in-out;
+    width: 80px;
+    height: 80px;
+  }
+
+  .contact-socials-card img:hover,
+  .contact-socials-card img:focus {
+    transform: translateY(-5px);
+  }
+
+  /* ---------------
     COMPONENTEN
  -----------------*/
   /* Hier komen de buttons en knoppen in */
@@ -929,7 +1178,9 @@ a:active {
   /* ---------------
     OVER MIJ PAGE
  -----------------*/
-
+  .over-mij.info {
+    margin: 1rem 0rem;
+  }
   /* ---------------
     CONTACT PAGE
  -----------------*/
