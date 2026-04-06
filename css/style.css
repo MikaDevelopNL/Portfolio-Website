@@ -267,7 +267,8 @@ a:active {
 
 .specialiteiten h2 {
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
+  padding-top: 1rem;
   border-bottom: 2px solid whitesmoke;
 }
 
@@ -292,11 +293,15 @@ a:active {
 .specialiteiten-card div {
   display: flex;
   gap: 10px;
+  margin-bottom: 2.5rem;
 }
 
 .specialiteiten-card .icon {
-  font-size: 5rem;
   margin: auto 0;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  filter: brightness(0) invert(1);
 }
 
 .specialiteiten-card p {
@@ -305,6 +310,7 @@ a:active {
 
 .specialiteiten-card h3 {
   overflow-wrap: break-word;
+  margin-top: 1.5rem;
 }
 
 .specialiteiten-card.reverse h3 {
@@ -330,10 +336,6 @@ a:active {
   color: black;
 }
 
-.projecten h2 {
-  text-align: center;
-}
-
 .projecten-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -354,6 +356,7 @@ a:active {
 .projecten-card a {
   display: block;
   text-align: center;
+  margin: 1rem 0;
 }
 
 .contact {
